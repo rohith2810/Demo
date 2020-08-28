@@ -62,9 +62,37 @@
             .left{
                 text-align: left;
             }
+            ul.navbar{
+                display: block;
+                list-style-type: none;
+                background-color: black;
+            }
+            li.nav{
+                display: inline;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 5px;
+                padding-right: 5px;
+                background-color: black;
+            }
+            li a{
+                text-decoration: none;
+                color: white;
+            }
+            li.nav:hover{
+                background-color: grey;
+            }
+            li.nav:active{
+                background-color: red;
+            }
         </style>
     </head>
     <body>
+        <ul class="navbar">
+            <li class="nav"><a href="HTML_Basics.html">Home</a></li>
+            <li class="nav"><a href="form.html">Register</a></li>
+            <li class="nav"><a href="details.html">Personal Details</a></li>
+        </ul>
         <div class="intro">
         <img src="Tony Stark.jpg" alt="Tony" height="100" width="70">
         <h1>Naga Sai Rohith Devarasetty</h1><br>
