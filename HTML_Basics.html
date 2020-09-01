@@ -41,7 +41,7 @@
             li.hidden{
                 display: none;
             }
-            span{
+            span.iron{
                 position:fixed;
                 bottom: 0;
                 right: 0;
@@ -111,7 +111,7 @@
         </div>
         <div class="marks">
         <h3>Acadamic Marks</h3>
-        <table>
+        <table id="marks">
             <tr>
                 <th>Subject Name</th>
                 <th>Obt. Marks</th>
@@ -157,8 +157,29 @@
                 <td class="right">94</td>
                 <td class="right">100</td>
             </tr>
-            <span>Iam Iron Man</span>
-        </table>
+            <tr>
+                <td class="left">Total</td>
+                <td class="right"><span id="total"></span></td>
+            </tr>
+            <tr>
+                <td class="left">Average</td>
+                <td class="right"><span id="avg"></span></td>
+            </tr>
+        </table><br>
+        <button type="button" onclick="total()">Total</button>
+        <span id="iron">Iam Iron Man</span>
         </div>
+        <script>
+            var table = document.getElementById("marks"), sumVal = 0;
+            
+            for(var i = 1; i < table.rows.length-3; i++)
+            {
+                sumVal = sumVal + parseInt(table.rows[i].cells[1].innerHTML);
+            }
+            
+            document.getElementById("total").innerHTML = sumVal;
+            var avg=sumVal/table.rows.length-3;
+            document.getElementById("avg").innerHTML=avg;
+        </script>
     </body>
 </html>
