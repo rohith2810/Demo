@@ -170,6 +170,7 @@
         <span id="iron">Iam Iron Man</span>
         </div>
         <script>
+            function total(){
             var table = document.getElementById("marks"), sumVal = 0;
             
             for(var i = 1; i < table.rows.length-3; i++)
@@ -180,6 +181,7 @@
             document.getElementById("total").innerHTML = sumVal;
             var avg=sumVal/table.rows.length-3;
             document.getElementById("avg").innerHTML=avg;
+            }
         </script>
     </body>
 </html>
