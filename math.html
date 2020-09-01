@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function math_f(){
+            var str="5 power 2 is "+Math.power(5,2)+"\n"+"Square root of 100 is "+Math.sqrt(100)+"\n"+"Absolute value of -4.3 is "+Math.abs(-4.3)+"\n"+
+            "A random number "+Math.random()+"\n"+"Ceil of 4.3 is "+Math.ceil(4.3)+"\n"+
+            "Round of 4.3 is "+Math.round(4.3)+"\n"+
+            "Floor of 4.3 is "+Math.floor(4.3)+"\n"+
+            "Sin(90) is "+Math.sin(Math.PI/2)+"\n"+
+            "Cos(90) is "+Math.cos(Math.PI/2);
+            document.getElementById("do").innerHTML=str;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Math Functions</h1>
+        <button onclick="math_f()">DO</button>
+        <span id="do"></span>
+    </body>
+</html>
