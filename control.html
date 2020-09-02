@@ -9,16 +9,23 @@
                 var n = document.getElementById("box").value;
                 n=parseInt(n);
                 str="";
+                try{
                 if(n<10){
-                    str="Number is less than 10";
+                    throw "Number is less than 10";
                 }
                 else if(n>=10 && n<=100){
-                    str="Number is between in 10 and 100";
+                    throw "Number is between in 10 and 100";
                 }
                 else{
-                    str="Number is greater tha 100";
+                    throw "Number is greater tha 100";
                 }
-                document.getElementById("area").innerHTML=str;
+                }
+                catch(err){
+                    document.getElementById("area").innerHTML=err;
+                }
+                finally{
+                    document.getElementById("area").innerHTML+=" Finally";
+                }
             }
             function fibo(){
                 var n = document.getElementById("box").value;
