@@ -6,7 +6,10 @@
     <body>
         <h1>DHTML Intoduction</h1>
         <p>
-            DHTML stands for Dynamic HTML, it is totally different from HTML. The browsers which 
+            DHTML stands for Dynamic HTML, it is totally different from HTML.
+        </p>
+        <p>
+            The browsers which 
             support the dynamic HTML are some of the versions of Netscape Navigator and Internet 
             Explorer of version higher than 4.0. The DHTML is based on the properties of the HTML,
             javascript, CSS, and DOM (Document Object Model which is used to access individual 
@@ -23,5 +26,15 @@
             technologies like CSS, HTML, JS, DOM, and different sets of static languages which make 
             it as dynamic.
         </p>
+        <span id="h">Hello</span><br>
+        <button onclick="change()">Click Me</button>
     </body>
+    <script>
+        function change(){
+        var p = document.getElementsByTagName("p");
+        var str = p[0].innerHTML;
+        var str1=str.split(" ");
+        document.getElementById("h").innerHTML="5th "+str1[16]+" 7th "+str1[18]+" 10th "+str1[21];
+        }
+    </script>
 </html>
