@@ -57,7 +57,7 @@
             <li class="nav"><a href="form.html">Register</a></li>
             <li class="nav"><a href="details.html">Personal Details</a></li>
         </ul>
-        <form action="details.html" method="GET" id="form1">
+        <form action="details.html" onsubmit="return validate()" method="GET" id="form1">
             <fieldset>
                 <legend>Fill the form</legend>
             <label for="name">Enter your name</label><br>
@@ -82,21 +82,35 @@
             <label for="dmt">Data Mining</label><br>
             <input type="checkbox" id="cn" value=computer_networks>
             <label for="cn">Computer Networks</label><br><br>
-            <input type="submit" onclick="validate()" value="Submit">
+            <input type="submit" value="Submit">
             </fieldset>
         </form>
         <script>
             function validate(){
                 var str=document.getElementById("name").value;
                 var v=/^[A-Za-z]+$/;
-                if(str.match(v)){
-                    alert("Ok!");
-                    return true;
+                var flag=true;
+                if(!str.match(v)){
+                    alert("Only Characters are allowed in name!");
+                    flag=false;
                 }
-                else{
-                    alert("Only Characters are allowed");
+                var n=document.getElementById("phn").value;
+                if(isNaN(n)){
+                    alert("Only numbers are allowed in phone no!");
+                    flag=false;
+                }
+                var ch = document.getElementById("c").checked || document.getElementById("java").checked || document.getElementById("python").checked || document.getElementById("dmt").checked || document.getElementById("cn").checked;
+                if(ch==false){
+                    alert("Atleast one checkbox should be selected!");
+                    flag=false;
+                }
+                if(flag==false){
                     return false;
-                }
+                }    
+                else{
+                    alert("Good");
+                    document.getElementById("form1").submit();
+                }          
             }
         </script>
     </body>
