@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <input type="text" id="box"><br>
+        <button type="button" onclick="check()">Check</button><button type="button" onclick="fibo()">Fibo</button><br>
+        <textarea id="area" cols="25" rows="5"></textarea>
+        <script>
+            function check(){
+                var n = document.getElementById("box").value;
+                n=parseInt(n);
+                str="";
+                if(n<10){
+                    str="Number is less than 10";
+                }
+                else if(n>=10 && n<=100){
+                    str="Number is between in 10 and 100";
+                }
+                else{
+                    str="Number is greater tha 100";
+                }
+                document.getElementById("area").innerHTML=str;
+            }
+            function fibo(){
+                var n = document.getElementById("box").value;
+                n=parseInt(n);
+                str="0";
+                var a1=0,a2=1,i,res=0;
+                for(i=0;i<n-1;i++){
+                    res=a1+a2;
+                    a1=a2;
+                    a2=res;
+                    str+=", "+res;
+                }
+                document.getElementById("area").innerHTML=str;
+            }
+        </script>
+    </body>
+</html>
