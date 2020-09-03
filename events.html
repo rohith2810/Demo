@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    </head>
     <body>
         <input type="text" onkeydown="this.style.backgroundColor='red'">
-        <button type="button" onclick="this.innerHTML='Ouch!'" onmousedown="this.innerHTML='Release me!'" onmouseover="this.style.color='red'" onmouseout="this.style.color='blue'">Click Me!</button>
+        <button type="button" onclick="this.innerHTML='Ouch!'" onmousedown="this.innerHTML='Release me!'" onmouseover="this.style.color='red'" onmouseout="this.style.color='blue'">Click Me!</button><br>
+        <button id="go">Dissappear</button><br>
+        <img src="Iron-Man.jpg" id="diss">
+        <script>
+            $("#go").click(function(){
+                $("#diss").hide("slow");
+            });
+        </script>
     </body>
 </html>
