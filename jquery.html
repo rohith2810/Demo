@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <style>
+            .red{
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Hello Red</div>
+        <p>Hello Blue</div>
+        <p>Hello yellow</div>
+        <p style="display: none;">Hello World!</p>
+        <button id="fadin">Fade In</button>
+        <button id="fadout">Fade Out</button>
+        <script>
+            $(document).ready(function(){
+                $("p").dblclick(function(){
+                    $(this).toggleClass("red");
+                });
+            });
+            $(document).ready(function(){
+                $("#fadin").click(function(){
+                    $("p").fadeIn("slow");
+                });
+                $("#fadout").click(function(){
+                    $("p").fadeOut("slow");
+                });
+            });
+        </script>
+    </body>
+</html>
