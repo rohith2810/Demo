@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <button>Post data</button>
+        <script>
+            $(document).ready(function(){
+                $("button").click(function(){
+                    $.post("send_back.asp",{
+                        name: "Rohith",
+                        college: "Vignan"
+                    },function(data,status){
+                        alert("Data: "+data+"\nStatus: "+status);
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
