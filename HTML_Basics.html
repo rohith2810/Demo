@@ -1,39 +1,20 @@
 <html>
     <head>
         <title>Naga Sai Rohith Devarasetty</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <style>
             table, th, td {
                 border: 2px solid black;
                 border-collapse: collapse;
             }
-            table {
-                outline: cornflowerblue solid 7px;
-                text-align: center;
-            }
-            *{
-                font-family: serif;
-                font-style: italic;
-            }
-            h1{
-                color:crimson;
-                font-size: 40px;
-                background-color:lavender;
-                padding: 20px;
-                text-align: center;
-            }
-            .intro{
-                color: grey;
-            }
+            
             h3 {
                 color: black;
-            }
-            ul{
-                list-style-type: square;
-                background-color:cornflowerblue;
-                padding: 10px 30px;
-            }
-            ul li{
-                background-color:antiquewhite;
             }
             a[target^=_]{
                 text-decoration: none;
@@ -62,29 +43,6 @@
             .left{
                 text-align: left;
             }
-            ul.navbar{
-                display: block;
-                list-style-type: none;
-                background-color: black;
-            }
-            li.nav{
-                display: inline;
-                padding-top: 10px;
-                padding-bottom: 10px;
-                padding-left: 5px;
-                padding-right: 5px;
-                background-color: black;
-            }
-            li a{
-                text-decoration: none;
-                color: white;
-            }
-            li.nav:hover{
-                background-color: grey;
-            }
-            li.nav:active{
-                background-color: red;
-            }
             th{
                 background-color: grey;
             }
@@ -94,23 +52,49 @@
         </style>
     </head>
     <body>
-        <ul class="navbar">
-            <li class="nav"><a href="HTML_Basics.html">Home</a></li>
-            <li class="nav"><a href="form.html">Register</a></li>
-            <li class="nav"><a href="details.html">Personal Details</a></li>
-        </ul>
-        <div class="intro">
-        <img src="Tony Stark.jpg" alt="Tony" height="100" width="70">
-        <h1>Naga Sai Rohith Devarasetty</h1><br>
-        <ul>
-            <li><h3>College :</h4> VFSTR Deemed to be University</li>
-            <li><h3>Course :</h4> Bachellors of Technology</li>
-            <li><h3>Stream :</h4> <a href="courses.html" target="_blank">Computer Science Engineering</a></li>
+        <nav class="navbar navbar-expand bg-dark navbar-dark">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="HTML_Basics.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="form.html">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="details.html">Personal Details</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container text-center">
+                <img src="Tony Stark.jpg" alt="Tony" height="100" width="70">
+                <h1>Naga Sai Rohith Devarasetty</h1>
+            </div>
+        </div>
+        <div class="container-fluid">
+        <div class="card-deck">
+            <div class="card bg-light">
+                <div class="card-body">
+                    <h4 class="card-title">College </h4>
+                    <div class="card-text">Deemed to be University</div>
+                </div>
+            </div>
+            <div class="card bg-light">
+                <div class="card-body">
+                    <h4 class="card-title">Course</h4>
+                    <div class="card-text"> Bachellors of Technology</div>
+                </div>
+            </div>
+            <div class="card bg-light">
+                <div class="card-body">
+                    <h4 class="card-title">Stream </h4>
+                    <a href="courses.html" target="_blank" class="card-link">Computer Science Engineering</a></li>
+                </div>
+            </div>
             <li class="hidden"><h3>About :</h3> Iam Iron Man.</li>
-        </ul>
         </div>
         <div class="marks">
-        <h3>Acadamic Marks</h3>
+        <h3 style="margin-top: 30px;">Acadamic Marks</h3>
         <table id="marks">
             <tr>
                 <th>Subject Name</th>
@@ -166,7 +150,7 @@
                 <td class="right"><span id="avg"></span></td>
             </tr>
         </table><br>
-        <button type="button" onclick="total()">Total</button>
+        <button type="button" onclick="total()" class="btn btn-secondary btn-sm" style="margin-left: 3px;">Total</button>
         <span id="iron">Iam Iron Man</span>
         </div>
         <script>
